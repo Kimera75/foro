@@ -63,7 +63,7 @@ return [
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
             'strict' => true,
-            'engine' => null,
+            'engine' => null, 
         ],
         //SE DUPLICÓ LO REFERENTE A LA CONEXION MYSQL Y
         //SE MODIFICO LA VARIABLE DATABASE, PARA
