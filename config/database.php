@@ -55,7 +55,7 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '3306'),
+            'port' => env('DB_PORT', '3306'), 
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
@@ -63,7 +63,7 @@ return [
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
             'strict' => true,
-            'engine' => null,
+            'engine' => null, 
         ],
         //SE DUPLICÓ LO REFERENTE A LA CONEXION MYSQL Y
         //SE MODIFICO LA VARIABLE DATABASE, PARA
@@ -73,8 +73,8 @@ return [
             'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE_TESTS', 'foro_tests'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'username' => env('MYSQL_USER', env('DB_USERNAME', 'forge')),  
+            'password' => env('MYSQL_PASSWORD', env('DB_PASSWORD', '')),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
