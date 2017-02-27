@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class ExampleTest extends TestCase
+
+
+
+class ExampleTest extends FeatureTestCase
 {
 
     //Se agregar esta linea para que cada que ejecutemos
@@ -14,13 +14,13 @@ class ExampleTest extends TestCase
 
     //para que todo se haga dentro de una transaccion y queda vacia la tabla y no afecta nada 
 
-    use DatabaseTransactions;
+    //use DatabaseTransactions;
     /**
      * A basic functional test example.
      *
      * @return void
      */
-    public function testBasicExample()
+    public function test_basic_example()
     {
 
        $user =  factory(\App\User::class)->create([
